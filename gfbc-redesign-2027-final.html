@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Greater First Baptist Church of Mount Pleasant Plains — Loving God, Loving Others, Magnifying Jesus Christ. Washington, DC 20009. Sunday School 8:45 AM · Sunday Service 10:00 AM.">
+<title>The Greater First Baptist Church — Washington, DC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ============================================================
+   GFBC 2027 — ELEVATED SACRED EDITORIAL
+   Cormorant Garamond (soul) + Outfit (clarity)
+   Deep midnight #0c1b2e · Amber gold #c8872c · Parchment #f7f2eb
+   ============================================================ */
+:root {
+  --night:       #0c1b2e;
+  --night-2:     #122032;
+  --night-3:     #1a2d42;
+  --amber:       #c8872c;
+  --amber-lt:    #e5a94e;
+  --amber-dk:    #9e6518;
+  --parchment:   #f7f2eb;
+  --parchment-2: #ede6d9;
+  --ivory:       #fdfaf6;
+  --white:       #ffffff;
+  --text:        #1a1108;
+  --text-mid:    #3d2e18;
+  --text-muted:  #7a6d58;
+  --nav-h:       70px;
+  --ease:        cubic-bezier(.25,.46,.45,.94);
+  --t:           0.32s var(--ease);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Outfit',sans-serif;background:var(--ivory);color:var(--text);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:'Outfit',sans-serif;cursor:pointer}
+
+/* ===== UTILITY ===== */
+.container{max-width:1160px;margin:0 auto;padding:0 2rem}
+.eyebrow{font-size:.67rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
+.serif{font-family:'Cormorant Garamond',serif}
+.h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:500;line-height:1.12;color:var(--night)}
+.h2 em,.h2-w em{font-style:italic;color:var(--amber)}
+.h2-w{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:500;line-height:1.12;color:var(--white)}
+.rule{width:44px;height:2px;background:var(--amber);margin:1.1rem 0 1.5rem}
+.rule-c{margin-left:auto;margin-right:auto}
+.rule-w{background:rgba(255,255,255,.28)}
+.body{font-size:.97rem;font-weight:300;line-height:1.85;color:var(--text-muted)}
+.body-dk{color:var(--text-mid)}
+.body-w{color:rgba(255,255,255,.62)}
+.btn{display:inline-flex;align-items:center;gap:.45rem;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.82rem 1.9rem;border:2px solid transparent;border-radius:0;transition:var(--t)}
+.btn-amber{background:var(--amber);color:var(--night)}.btn-amber:hover{background:var(--amber-lt)}
+.btn-night{background:var(--night);color:var(--white)}.btn-night:hover{background:var(--night-3)}
+.btn-ol-amber{background:transparent;color:var(--amber);border-color:var(--amber)}.btn-ol-amber:hover{background:var(--amber);color:var(--night)}
+.btn-ol-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}.btn-ol-white:hover{border-color:var(--amber-lt);color:var(--amber-lt)}
+
+/* ===== PAGES ===== */
+.page{display:none}.page.active{display:block}
+
+/* ===== NAV ===== */
+#nav{position:fixed;inset:0 0 auto;height:var(--nav-h);z-index:300;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(12,27,46,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(200,135,44,.16)}
+.nav-brand{display:flex;flex-direction:column;gap:2px;cursor:pointer}
+.nav-brand-n{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--white);line-height:1}
+.nav-brand-s{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
+.nav-links{display:flex;align-items:center;gap:.1rem;list-style:none}
+.nav-links a,.nav-links button{background:none;border:none;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.68);padding:.45rem .65rem;transition:color var(--t)}
+.nav-links a:hover,.nav-links button:hover{color:var(--amber-lt)}
+.nav-links a.active-link{color:var(--amber)}
+.nav-live{display:inline-flex;align-items:center;gap:.35rem;color:#f87171 !important}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#f87171;animation:livepulse 1.7s infinite}
+@keyframes livepulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+.nav-give-btn{background:var(--amber)!important;color:var(--night)!important;padding:.42rem 1.1rem!important;font-weight:700!important}
+.nav-give-btn:hover{background:var(--amber-lt)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--white);border-radius:1px;transition:var(--t)}
+.mob-nav{display:none;position:fixed;top:var(--nav-h);left:0;right:0;bottom:0;background:rgba(12,27,46,.98);z-index:299;flex-direction:column;padding:2rem;overflow-y:auto}
+.mob-nav.open{display:flex}
+.mob-nav a,.mob-nav button{background:none;border:none;text-align:left;font-size:1.05rem;font-weight:400;color:rgba(255,255,255,.82);padding:.9rem 0;border-bottom:1px solid rgba(255,255,255,.07);transition:color var(--t)}
+.mob-nav a:hover,.mob-nav button:hover{color:var(--amber)}
+
+/* ===== HERO ===== */
+.hero{min-height:100vh;background:var(--night);display:flex;flex-direction:column;position:relative;overflow:hidden;padding-top:var(--nav-h)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 72% 38%,rgba(200,135,44,.13) 0%,transparent 60%),radial-gradient(ellipse 35% 50% at 15% 82%,rgba(200,135,44,.07) 0%,transparent 50%),linear-gradient(155deg,#0c1b2e 0%,#0f2236 55%,#0c1b2e 100%)}
+.hero-xm{position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);width:min(680px,88vw);height:min(680px,88vw);pointer-events:none;opacity:.03}
+.hero-xm::before,.hero-xm::after{content:'';position:absolute;background:var(--amber);border-radius:2px}
+.hero-xm::before{width:10%;height:100%;left:45%}
+.hero-xm::after{width:100%;height:10%;top:28%}
+.hero-body{position:relative;z-index:1;flex:1;display:flex;align-items:flex-end;padding:0 2.5rem 5rem;max-width:1160px;margin:0 auto;width:100%}
+.hero-txt{max-width:660px}
+.hero-tag{display:inline-flex;align-items:center;gap:.55rem;font-size:.67rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:1.5rem;opacity:0;animation:fup .8s .3s forwards}
+.hero-tag::before{content:'';width:26px;height:1px;background:var(--amber)}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.4rem,9vw,7.2rem);font-weight:500;line-height:.97;color:var(--white);margin-bottom:1.8rem;opacity:0;animation:fup .9s .5s forwards}
+.hero-h1 em{font-style:italic;color:var(--amber-lt)}
+.hero-sub{font-size:1.02rem;font-weight:300;color:rgba(255,255,255,.54);letter-spacing:.04em;margin-bottom:2.5rem;opacity:0;animation:fup .9s .7s forwards}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:fup .9s .9s forwards}
+.hero-strip{position:relative;z-index:1;background:var(--amber);opacity:0;animation:fin .8s 1.1s forwards}
+.hero-strip-in{max-width:1160px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:repeat(3,1fr)}
+.si{display:flex;align-items:center;gap:1rem;padding:1.3rem 0;border-right:1px solid rgba(12,27,46,.12)}
+.si:last-child{border-right:none}
+.si-icon{font-size:1.4rem}
+.si-lbl{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--night)}
+.si-val{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;color:var(--night);line-height:1;margin-top:2px}
+@keyframes fup{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fin{from{opacity:0}to{opacity:1}}
+
+/* ===== REVEAL ===== */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ===== SPLIT PANELS ===== */
+.split{display:grid;grid-template-columns:1fr 1fr}
+.panel{padding:5rem 4rem;position:relative;overflow:hidden}
+.panel.dark{background:var(--night-2)}.panel.dark .h2{color:var(--white)}.panel.dark .body{color:rgba(255,255,255,.6)}
+.panel.light{background:var(--parchment)}
+.bg-ltr{position:absolute;right:-1rem;bottom:-1.5rem;font-family:'Cormorant Garamond',serif;font-size:15rem;font-weight:700;line-height:1;opacity:.04;color:var(--amber);pointer-events:none;user-select:none}
+
+/* ===== PASTOR ===== */
+.pastor-sec{background:var(--ivory);padding:6rem 0}
+.pastor-in{display:grid;grid-template-columns:400px 1fr;gap:5rem;align-items:center;max-width:1160px;margin:0 auto;padding:0 2rem}
+.pastor-frame{position:relative}
+.pastor-frame::before{content:'';position:absolute;top:1.4rem;left:-1.4rem;right:1.4rem;bottom:-1.4rem;border:2px solid var(--amber);z-index:0}
+.pastor-imgbox{position:relative;z-index:1;width:100%;aspect-ratio:3/4;overflow:hidden;background:linear-gradient(135deg,#c4a882,#7a6048)}
+.pastor-imgbox img{width:100%;height:100%;object-fit:cover}
+.pastor-badge{position:absolute;bottom:-1.4rem;right:-1.4rem;z-index:2;background:var(--amber);padding:.9rem 1.3rem}
+.pastor-badge-t{font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--night)}
+.pastor-badge-n{font-family:'Cormorant Garamond',serif;font-size:.92rem;font-weight:500;color:var(--night);line-height:1.2;margin-top:2px}
+.pastor-quote{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;line-height:1.5;color:var(--night);border-left:3px solid var(--amber);padding-left:1.4rem;margin:1.4rem 0 1.7rem}
+
+/* ===== MINISTRY GRID ===== */
+.min-sec{background:var(--night);padding:6rem 0}
+.min-intro{max-width:1160px;margin:0 auto;padding:0 2rem 3rem}
+.min-grid{max-width:1160px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.mc{background:var(--night-2);padding:2.4rem 2rem;position:relative;overflow:hidden;transition:background var(--t)}
+.mc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform var(--t)}
+.mc:hover{background:rgba(200,135,44,.07)}.mc:hover::after{transform:scaleX(1)}
+.mc-icon{font-size:1.7rem;margin-bottom:.9rem}
+.mc-name{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:500;color:var(--white);margin-bottom:.55rem}
+.mc-desc{font-size:.87rem;line-height:1.78;color:rgba(255,255,255,.5);font-weight:300}
+
+/* ===== GIVE ===== */
+.give-sec{background:var(--amber);padding:5rem 0;position:relative;overflow:hidden}
+.give-cross{position:absolute;right:2rem;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',serif;font-size:18rem;font-weight:700;line-height:1;opacity:.08;color:var(--night);pointer-events:none}
+.give-in{max-width:1160px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.give-sec .eyebrow{color:rgba(12,27,46,.6)}
+.give-sec .h2{color:var(--night)}.give-sec .h2 em{color:rgba(12,27,46,.72);font-style:italic}
+.give-sec .rule{background:rgba(12,27,46,.2)}
+.give-txt{font-size:.97rem;font-weight:300;color:rgba(12,27,46,.72);line-height:1.8;max-width:520px}
+.give-actions{display:flex;flex-direction:column;gap:.8rem;align-items:center}
+.give-methods{max-width:1160px;margin:3rem auto 0;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.gm{background:var(--parchment-2);padding:1.9rem 1.5rem}
+.gm-icon{font-size:1.5rem;margin-bottom:.75rem}
+.gm-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--night);margin-bottom:.45rem}
+.gm-desc{font-size:.85rem;line-height:1.72;color:var(--text-muted);font-weight:300}
+.scripture-blk{max-width:1160px;margin:2.5rem auto 0;padding:2.5rem 2rem 0;text-align:center;border-top:1px solid rgba(12,27,46,.15);font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-style:italic;color:var(--night)}
+.scripture-ref{font-family:'Outfit',sans-serif;font-style:normal;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-dk);margin-top:.55rem}
+
+/* ===== CONTACT ===== */
+.contact-sec{background:var(--white);padding:6rem 0}
+.contact-in{max-width:1160px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem}
+.ci{display:flex;flex-direction:column;gap:1.6rem}
+.cc{display:flex;gap:1.1rem;align-items:flex-start;padding:1.4rem;background:var(--parchment);border-left:3px solid var(--amber)}
+.cc-icon{width:38px;height:38px;background:var(--night);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cc-lbl{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.28rem}
+.cc-val{font-size:.94rem;color:var(--text);line-height:1.6}
+.cc-val a{color:var(--night)}.cc-val a:hover{color:var(--amber)}
+.map-box{border:1px solid var(--parchment-2);overflow:hidden;min-height:360px;position:relative}
+.map-box iframe{width:100%;min-height:360px;border:none;display:block}
+.map-tag{position:absolute;top:1rem;left:1rem;z-index:2;background:var(--amber);color:var(--night);padding:.3rem .75rem;font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+
+/* ===== PAGE BANNER ===== */
+.pg-banner{background:var(--night);padding:9rem 0 4rem;position:relative;overflow:hidden}
+.pg-banner-bg{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 80% 20%,rgba(200,135,44,.1) 0%,transparent 60%)}
+.pg-banner-in{max-width:1160px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.pg-banner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,4.5rem);font-weight:400;line-height:1.1;color:var(--white);margin-top:.8rem}
+.pg-banner h1 em{font-style:italic;color:var(--amber-lt)}
+.breadcrumb{display:flex;align-items:center;gap:.45rem;font-size:.7rem;color:rgba(255,255,255,.38)}
+.breadcrumb span{color:var(--amber);cursor:pointer;opacity:.75}
+
+/* ===== ABOUT ===== */
+.ab-two{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;margin-top:2.5rem}
+.hist-box{background:var(--parchment);padding:2.5rem;border-top:3px solid var(--amber)}
+.hist-box h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--night);margin-bottom:.9rem}
+.belief-lst{display:flex;flex-direction:column;gap:1rem}
+.blf{display:flex;gap:.9rem;align-items:flex-start;padding:.9rem 0;border-bottom:1px solid var(--parchment-2)}
+.blf-n{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--amber);line-height:1;min-width:1.8rem}
+.blf-t{font-size:.9rem;line-height:1.72;color:var(--text-mid);font-weight:300}
+.blf-t strong{font-weight:600;color:var(--night);display:block;margin-bottom:1px}
+
+/* ===== LEADERSHIP ===== */
+.ldr-grid{max-width:1160px;margin:0 auto;padding:5rem 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.8rem}
+.lc{background:var(--parchment);overflow:hidden;transition:transform var(--t),box-shadow var(--t)}
+.lc:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.08)}
+.lc.feat{grid-column:span 3;display:grid;grid-template-columns:320px 1fr}
+.li-img{aspect-ratio:1;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:2.5rem;color:rgba(255,255,255,.25)}
+.li-img.tall{aspect-ratio:3/4}
+.li-img img{width:100%;height:100%;object-fit:cover}
+.li-info{padding:1.7rem}
+.li-role{font-size:.66rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:.35rem}
+.li-name{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:500;color:var(--night);margin-bottom:.65rem}
+.li-bio{font-size:.87rem;line-height:1.75;color:var(--text-muted);font-weight:300}
+.ldesc{max-width:1160px;margin:0 auto;padding:0 2rem}
+.ldesc-box{background:var(--night);padding:3rem 4rem;display:flex;gap:3rem;align-items:center}
+.ldesc-q{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;line-height:1.75;color:rgba(255,255,255,.65);max-width:320px}
+
+/* ===== HISTORY ===== */
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:grid;grid-template-columns:100px 1fr;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--parchment-2)}
+.tl-item:last-child{border-bottom:none}
+.tl-date{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--amber);text-align:right;padding-top:.2rem;line-height:1.1}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:var(--amber);margin:.55rem auto 0}
+.tl-content h4{font-family:'Cormorant Garamond',serif;font-size:1.12rem;font-weight:500;color:var(--night);margin-bottom:.45rem}
+.tl-content p{font-size:.88rem;line-height:1.78;color:var(--text-muted);font-weight:300}
+
+/* ===== CALENDAR ===== */
+.ev-grid{max-width:1160px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.ecard{background:var(--white);border:1px solid var(--parchment-2);padding:1.7rem;position:relative;transition:var(--t)}
+.ecard:hover{border-color:var(--amber)}
+.ecard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform var(--t)}
+.ecard:hover::before{transform:scaleX(1)}
+.ev-date{display:flex;align-items:center;gap:.45rem;font-size:.67rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--amber);margin-bottom:.7rem}
+.ev-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--night);margin-bottom:.45rem}
+.ev-desc{font-size:.86rem;line-height:1.73;color:var(--text-muted);font-weight:300}
+.ev-time{margin-top:.9rem;font-size:.71rem;font-weight:600;color:var(--text-muted);letter-spacing:.05em}
+.ev-badge{position:absolute;top:1rem;right:1rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--parchment);color:var(--amber);padding:.18rem .5rem}
+
+/* ===== GALLERY ===== */
+.gal-grid{max-width:1160px;margin:0 auto;padding:0 2rem;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.gi{overflow:hidden;position:relative;cursor:pointer;aspect-ratio:1;background:var(--parchment-2)}
+.gi:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:unset}
+.gi:nth-child(8){grid-column:span 2;aspect-ratio:unset;min-height:180px}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gi:hover img{transform:scale(1.05)}
+.gi-cap{position:absolute;inset:0;background:rgba(12,27,46,.65);display:flex;align-items:flex-end;padding:.9rem;opacity:0;transition:opacity var(--t)}
+.gi:hover .gi-cap{opacity:1}
+.gi-cap-t{font-size:.76rem;font-weight:500;color:var(--white);letter-spacing:.04em}
+
+/* ===== LIVE STREAM ===== */
+.stream-sec{background:var(--night);padding:10rem 0 6rem;min-height:100vh}
+.stream-in{max-width:1160px;margin:0 auto;padding:0 2rem}
+.stream-embed{width:100%;aspect-ratio:16/9;background:#000;border:1px solid rgba(200,135,44,.2);position:relative;overflow:hidden;margin:2.5rem 0}
+.platform-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2.5rem}
+.pc{background:var(--night-2);padding:2.5rem 2rem;text-align:center;border:1px solid rgba(255,255,255,.07);transition:var(--t)}
+.pc:hover{border-color:rgba(200,135,44,.3)}
+.pc-icon{margin-bottom:1rem}
+.pc-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:.55rem}
+.pc-desc{font-size:.86rem;color:rgba(255,255,255,.5);font-weight:300;margin-bottom:1.4rem;line-height:1.65}
+.sermon-grid{max-width:1160px;margin:3rem auto 0;padding:0 2rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.scard{background:var(--night-2);overflow:hidden;transition:var(--t)}
+.scard:hover{transform:translateY(-3px)}
+.sthumb{position:relative;padding-bottom:56.25%;background:var(--night-3);overflow:hidden}
+.sthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.splay{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:52px;background:rgba(200,135,44,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--night);font-size:1.1rem;transition:var(--t)}
+.scard:hover .splay{background:var(--amber)}
+.sinfo{padding:1.4rem}
+.sinfo h4{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--white);margin-bottom:.4rem}
+.smeta{font-size:.78rem;color:rgba(255,255,255,.45);margin-bottom:.5rem}
+.sdesc{font-size:.84rem;color:rgba(255,255,255,.48);line-height:1.65;font-weight:300}
+
+/* ===== QR GIVE PAGE ===== */
+.qr-sec{background:var(--parchment);padding:5rem 0}
+.qr-box{max-width:860px;margin:0 auto;background:linear-gradient(135deg,var(--amber-dk),var(--amber));border-radius:4px;padding:3rem;text-align:center;color:var(--night)}
+.qr-display{background:var(--white);padding:1.5rem;border-radius:4px;display:inline-block;margin:2rem 0}
+.qr-display img{width:240px;height:240px}
+.qr-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+.qs{background:rgba(255,255,255,.15);padding:1.2rem .8rem;border-radius:4px}
+.qs-n{width:36px;height:36px;background:var(--white);color:var(--amber-dk);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;margin:0 auto .75rem;font-size:.9rem}
+.qs-t{font-size:.82rem;font-weight:500}
+
+/* ===== GIVING FORM PAGE ===== */
+.gform-sec{background:var(--ivory);padding:10rem 0 6rem}
+.gform-in{max-width:700px;margin:0 auto;padding:0 2rem}
+.gform-box{background:var(--white);padding:3rem;border:1px solid var(--parchment-2)}
+.fg{margin-bottom:1.4rem}
+.fg label{display:block;font-size:.75rem;font-weight:600;letter-spacing:.07em;color:var(--night);margin-bottom:.4rem}
+.fg input,.fg select,.fg textarea{width:100%;padding:.82rem 1rem;border:2px solid var(--parchment-2);font-family:'Outfit',sans-serif;font-size:.96rem;color:var(--text);background:var(--white);transition:border-color var(--t)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--amber)}
+.fg textarea{resize:vertical;min-height:130px}
+.sub-btn{width:100%;background:var(--amber);color:var(--night);border:none;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:1rem;cursor:pointer;transition:var(--t)}
+.sub-btn:hover{background:var(--amber-lt)}
+
+/* ===== CONTACT FORM ===== */
+.cform-box{background:var(--white);padding:2.5rem;border:1px solid var(--parchment-2)}
+.cform-box h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--night);margin-bottom:1.4rem}
+
+/* ===== HISTORY PAGE ===== */
+.hist-sec{padding:5rem 0;background:var(--ivory)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--night);padding:5rem 0 0;border-top:1px solid rgba(200,135,44,.14)}
+.ft-grid{max-width:1160px;margin:0 auto;padding:0 2rem 4rem;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem}
+.ft-brand-n{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;color:var(--white)}
+.ft-brand-s{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:4px 0 1rem}
+.ft-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.93rem;line-height:1.65;color:rgba(255,255,255,.35)}
+.ft-col-t{font-size:.63rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:1.1rem}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.ft-links a,.ft-links button{background:none;border:none;padding:0;text-align:left;font-family:'Outfit',sans-serif;font-size:.87rem;font-weight:300;color:rgba(255,255,255,.5);transition:color var(--t)}
+.ft-links a:hover,.ft-links button:hover{color:var(--amber)}
+.ft-contact{font-size:.87rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.9}
+.ft-contact a{color:rgba(255,255,255,.5)}.ft-contact a:hover{color:var(--amber)}
+.ft-social{display:flex;gap:.8rem;margin-top:1rem}
+.ft-social a{width:36px;height:36px;background:rgba(255,255,255,.07);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.9rem;transition:var(--t)}
+.ft-social a:hover{background:var(--amber);color:var(--night)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.06);max-width:1160px;margin:0 auto;padding:1.4rem 2rem;display:flex;justify-content:space-between;align-items:center;font-size:.7rem;color:rgba(255,255,255,.25);font-weight:300}
+.ft-bot a{color:var(--amber)}
+
+/* ===== FLOAT BUTTONS ===== */
+.float-wrap{position:fixed;bottom:1.5rem;right:1.5rem;z-index:200;display:flex;flex-direction:column;gap:.6rem;align-items:flex-end}
+.flt-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--night);color:var(--white);padding:.55rem 1rem;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:24px;box-shadow:0 4px 16px rgba(0,0,0,.25);transition:var(--t);cursor:pointer;border:none}
+.flt-btn:hover{background:var(--amber);color:var(--night)}
+.flt-btn.give-f{background:var(--amber);color:var(--night)}.flt-btn.give-f:hover{background:var(--amber-lt)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  #nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .hero-body{padding:0 1.5rem 4rem}
+  .hero-strip-in{grid-template-columns:1fr;padding:0 1.5rem}
+  .si{border-right:none;border-bottom:1px solid rgba(12,27,46,.1);padding:.9rem 0}
+  .split{grid-template-columns:1fr}
+  .panel{padding:3.5rem 1.5rem}
+  .pastor-in{grid-template-columns:1fr;gap:3.5rem;padding:0 1.5rem}
+  .pastor-frame{max-width:280px}
+  .min-grid{grid-template-columns:1fr}
+  .give-in{grid-template-columns:1fr}
+  .give-methods{grid-template-columns:1fr 1fr}
+  .contact-in{grid-template-columns:1fr}
+  .ab-two{grid-template-columns:1fr}
+  .ldr-grid{grid-template-columns:1fr}
+  .lc.feat{grid-column:span 1;grid-template-columns:1fr}
+  .ev-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .gi:nth-child(1){grid-column:span 2}
+  .gi:nth-child(8){grid-column:span 2}
+  .platform-grid{grid-template-columns:1fr}
+  .sermon-grid{grid-template-columns:1fr}
+  .qr-steps{grid-template-columns:repeat(2,1fr)}
+  .ft-grid{grid-template-columns:1fr 1fr;gap:2rem}
+  .ft-bot{flex-direction:column;gap:.4rem;text-align:center}
+  .ldesc-box{flex-direction:column;padding:2rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="nav">
+  <div class="nav-brand" onclick="showPage('home')">
+    <span class="nav-brand-n">The Greater First Baptist Church</span>
+    <span class="nav-brand-s">Mount Pleasant Plains · Washington, DC</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home"       onclick="goTo('home')">Home</a></li>
+    <li><a href="#about"      onclick="goTo('about')">About</a></li>
+    <li><a href="#history"    onclick="goTo('history')">History</a></li>
+    <li><a href="#leadership" onclick="goTo('leadership')">Leadership</a></li>
+    <li><a href="#ministries" onclick="goTo('ministries')">Ministries</a></li>
+    <li><a href="#live"       onclick="goTo('live')" class="nav-live"><span class="live-dot"></span>Live</a></li>
+    <li><a href="#calendar"   onclick="goTo('calendar')">Calendar</a></li>
+    <li><a href="#gallery"    onclick="goTo('gallery')">Gallery</a></li>
+    <li><a href="#contact"    onclick="goTo('contact')">Contact</a></li>
+    <li><a href="#give"       onclick="goTo('give')" class="nav-give-btn">Give</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMob()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#home"       onclick="goTo('home');toggleMob()">Home</a>
+  <a href="#about"      onclick="goTo('about');toggleMob()">About</a>
+  <a href="#history"    onclick="goTo('history');toggleMob()">History</a>
+  <a href="#leadership" onclick="goTo('leadership');toggleMob()">Leadership</a>
+  <a href="#ministries" onclick="goTo('ministries');toggleMob()">Ministries</a>
+  <a href="#live"       onclick="goTo('live');toggleMob()">🔴 Live Stream</a>
+  <a href="#calendar"   onclick="goTo('calendar');toggleMob()">Calendar</a>
+  <a href="#gallery"    onclick="goTo('gallery');toggleMob()">Gallery</a>
+  <a href="#contact"    onclick="goTo('contact');toggleMob()">Contact</a>
+  <a href="#give"       onclick="goTo('give');toggleMob()">Give</a>
+</div>
+
+<!-- ============================================================  HOME  -->
+<div id="page-home" class="page active">
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-xm"></div>
+    <div class="hero-body">
+      <div class="hero-txt">
+        <div class="hero-tag">Washington, DC · Since 1876 · 2701 13th St NW</div>
+        <h1 class="hero-h1">Loving God,<br><em>Loving Others,</em><br>Magnifying Christ</h1>
+        <p class="hero-sub">The Greater First Baptist Church of Mount Pleasant Plains</p>
+        <div class="hero-ctas">
+          <a class="btn btn-amber" href="#about" onclick="goTo('about')">Our Story</a>
+          <a class="btn btn-ol-white" href="#contact" onclick="goTo('contact')">Plan Your Visit →</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="hero-strip-in">
+        <div class="si"><span class="si-icon">📖</span><div><div class="si-lbl">Sunday School</div><div class="si-val">8:45 AM</div></div></div>
+        <div class="si"><span class="si-icon">⛪</span><div><div class="si-lbl">Sunday Service</div><div class="si-val">10:00 AM</div></div></div>
+        <div class="si"><span class="si-icon">📍</span><div><div class="si-lbl">Location</div><div class="si-val" style="font-size:.95rem">2701 13th St NW, DC 20009</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION/VISION -->
+  <div class="split">
+    <div class="panel dark"><div class="bg-ltr">M</div>
+      <p class="eyebrow rv">Our Mission</p>
+      <h2 class="h2 rv d1" style="color:var(--white)">Rooted in <em>Love & Purpose</em></h2>
+      <div class="rule rv d2"></div>
+      <p class="body body-w rv d3">The mission of The Greater First Baptist Church is to love God, to love others, and to magnify the name of Jesus Christ — in our congregation, our neighborhood, and throughout the world.</p>
+    </div>
+    <div class="panel light"><div class="bg-ltr">V</div>
+      <p class="eyebrow rv">Our Vision</p>
+      <h2 class="h2 rv d1">Called to <em>Make Disciples</em></h2>
+      <div class="rule rv d2"></div>
+      <p class="body body-dk rv d3">To glorify God, make true disciples through missionary activity and support, minister the ordinances, edify believers, and do all that is sovereignly possible and biblically permissible to magnify the name of Jesus.</p>
+    </div>
+  </div>
+
+  <!-- PASTOR -->
+  <section class="pastor-sec">
+    <div class="pastor-in">
+      <div class="pastor-frame rv">
+        <div class="pastor-imgbox">
+          <img src="https://thegfbcdc.org/images/pastor_elect_image.jpg" alt="Rev. Dr. Jonathan Z. Queen"
+               onerror="this.style.display='none'">
+        </div>
+        <div class="pastor-badge">
+          <div class="pastor-badge-t">Senior Pastor</div>
+          <div class="pastor-badge-n">Rev. Dr. Jonathan Z. Queen</div>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow rv">Meet Our Pastor</p>
+        <h2 class="h2 rv d1">Shepherding <em>Our Community</em> in Faith</h2>
+        <div class="rule rv d2"></div>
+        <blockquote class="pastor-quote rv d2">"My philosophy of ministry is to connect to others through Love — modeling Christian love in every area of life."</blockquote>
+        <p class="body body-dk rv d3" style="margin-bottom:.9rem">Rev. Dr. Jonathan Z. Queen serves as Senior Pastor, providing spiritual leadership, biblical teaching, and pastoral care to the entire church family. Installed March 28, 2026, Dr. Queen holds a Doctor of Ministry from Regent University and is the author of six books.</p>
+        <p class="body body-dk rv d3">He oversees worship, discipleship, counseling, and the church's mission to love God, love others, and magnify Jesus Christ in Washington, DC and beyond.</p>
+        <div class="rv d4" style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem">
+          <a class="btn btn-amber" href="#leadership" onclick="goTo('leadership')">Full Leadership Team</a>
+          <a class="btn btn-ol-amber" href="#about" onclick="goTo('about')">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINISTRIES -->
+  <section class="min-sec">
+    <div class="min-intro">
+      <p class="eyebrow rv">Our Ministries</p>
+      <h2 class="h2-w rv d1">A Place for <em>Every Season of Life</em></h2>
+      <div class="rule rv d2"></div>
+      <p class="body body-w rv d3" style="max-width:560px">Our church is not a place for spectators — it is a place for team members. No matter your age or season of life, there is a ministry where you belong.</p>
+    </div>
+    <div class="min-grid">
+      <div class="mc rv"><div class="mc-icon">🎵</div><div class="mc-name">Media & Technology</div><p class="mc-desc">Sermons uploaded in video and audio each week. Active Facebook and YouTube channels extend our reach.</p></div>
+      <div class="mc rv d1"><div class="mc-icon">📖</div><div class="mc-name">Small Group Bible Study</div><p class="mc-desc">Connect in fellowship, grow in scripture, minister to one another, and nurture your walk with God.</p></div>
+      <div class="mc rv d2"><div class="mc-icon">🚌</div><div class="mc-name">Youth Ministry</div><p class="mc-desc">Sunday morning classes where every child participates, asks questions, and learns at their level.</p></div>
+      <div class="mc rv d1"><div class="mc-icon">👩‍👩‍👧</div><div class="mc-name">Women's Group</div><p class="mc-desc">Special times of discipleship, interaction, and refreshing fellowship for the women of our congregation.</p></div>
+      <div class="mc rv d2"><div class="mc-icon">🎤</div><div class="mc-name">Music & Drama</div><p class="mc-desc">Instrumentalists, vocalists, choir members, and drama artists glorifying God with their talents each Sunday.</p></div>
+      <div class="mc rv d3"><div class="mc-icon">🙏</div><div class="mc-name">Prayer Warriors</div><p class="mc-desc">Dedicated volunteers interceding every Sunday and throughout the week for the pastor, church, and world.</p></div>
+    </div>
+    <div style="text-align:center;padding:2.5rem 0 0">
+      <a class="btn btn-amber rv" href="#ministries" onclick="goTo('ministries')">Explore All Ministries →</a>
+    </div>
+  </section>
+
+  <!-- GIVE PREVIEW -->
+  <section class="give-sec" style="padding:4rem 0">
+    <div class="give-cross">✝</div>
+    <div class="give-in">
+      <div>
+        <p class="eyebrow rv">Support Our Ministry</p>
+        <h2 class="h2 rv d1">Your Generosity <br>Changes <em>Lives</em></h2>
+        <div class="rule rv d2"></div>
+        <p class="give-txt rv d3">Giving has a deeper impact than the gift itself. Your contributions fuel worship, youth programs, missions, building maintenance, and community outreach across Washington, DC.</p>
+      </div>
+      <div class="give-actions rv d2">
+        <a class="btn btn-night" href="#give" onclick="goTo('give')">Give Online Now</a>
+        <a href="#give" onclick="goTo('give-qr')" style="font-size:.76rem;color:var(--night);text-decoration:underline;opacity:.7">Scan QR Code to Give</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PREVIEW -->
+  <section class="contact-sec">
+    <div class="contact-in">
+      <div>
+        <p class="eyebrow rv">We'd Love to Welcome You</p>
+        <h2 class="h2 rv d1">Join Us <em>This Sunday</em></h2>
+        <div class="rule rv d2"></div>
+        <div class="ci">
+          <div class="cc rv d2"><div class="cc-icon"><i class="fas fa-phone" style="color:#fff;font-size:.9rem"></i></div><div><div class="cc-lbl">Phone</div><div class="cc-val"><a href="tel:2024626127">202-462-6127</a><br><a href="tel:2024621730">202-462-1730</a></div></div></div>
+          <div class="cc rv d3"><div class="cc-icon"><i class="fas fa-envelope" style="color:#fff;font-size:.9rem"></i></div><div><div class="cc-lbl">Email</div><div class="cc-val"><a href="mailto:info@thegfbcdc.org">info@thegfbcdc.org</a></div></div></div>
+          <div class="cc rv d3"><div class="cc-icon"><i class="fas fa-map-marker-alt" style="color:#fff;font-size:.9rem"></i></div><div><div class="cc-lbl">Address</div><div class="cc-val">2701 13th Street, N.W.<br>Washington, D.C. 20009</div></div></div>
+          <div class="cc rv d3"><div class="cc-icon"><i class="fas fa-car" style="color:#fff;font-size:.9rem"></i></div><div><div class="cc-lbl">Parking</div><div class="cc-val">Carlos Rosario International Public Charter School (1100 Harvard St NW) — free shuttle to church every Sunday.</div></div></div>
+        </div>
+        <div style="margin-top:1.4rem" class="rv d4">
+          <a class="btn btn-amber" href="#contact" onclick="goTo('contact')">Full Contact Page →</a>
+        </div>
+      </div>
+      <div class="map-box rv d2">
+        <div class="map-tag">📍 Find Us</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6207.909459685565!2d-77.0292107!3d38.9250122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7e1c1091d6b%3A0x785199a699d51b18!2sThe%20Greater%20First%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1770510011876!5m2!1sen!2sus" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Church Location" style="min-height:360px"></iframe>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /home -->
+
+<!-- ============================================================  ABOUT  -->
+<div id="page-about" class="page">
+  <div class="pg-banner"><div class="pg-banner-bg"></div>
+    <div class="pg-banner-in">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span> / About</div>
+      <h1>About <em>Our Church</em></h1>
+    </div>
+  </div>
+
+  <div style="background:var(--ivory);padding:5rem 0">
+    <div class="container">
+      <div style="max-width:680px;margin-bottom:2.5rem">
+        <p class="eyebrow">Who We Are</p>
+        <h2 class="h2" style="margin-top:.5rem">A Community of Faith<br>in the Heart of <em>Washington, DC</em></h2>
+        <div class="rule"></div>
+        <p class="body body-dk" style="margin-bottom:1rem">The Greater First Baptist Church of Mount Pleasant Plains is a historic congregation in the heart of Washington, DC. Founded in 1876 by emancipated slaves who gathered for song and prayer, our church has served this community for nearly 150 years.</p>
+        <p class="body body-dk">We are a diverse family of believers united by a common faith in Jesus Christ and a shared mission to love God, love others, and magnify His name in all we do. Our legacy includes dedicated pastoral leadership from founding pastor Rev. Andrew Green through Dr. Winston C. Ridley and now Rev. Dr. Jonathan Z. Queen.</p>
+      </div>
+
+      <div class="ab-two">
+        <div class="hist-box">
+          <h3>Foundation and Ministry</h3>
+          <p class="body body-dk" style="margin-bottom:1rem">The Greater First Baptist Church is grounded in a strong tradition of faith, education, and service. From its earliest days, the church has emphasized sound biblical teaching, spiritual formation, and equipping believers to serve within the church and throughout the broader community.</p>
+          <p class="body body-dk" style="margin-bottom:1rem">Throughout its history, the church has been shaped by dedicated pastoral and ministerial leadership. This journey reflects a balance of tradition and growth — honoring foundational values while responding to the evolving needs of the congregation and community.</p>
+          <p class="body body-dk" style="margin-bottom:1.4rem">The church actively engages with community organizations, faith-based councils, and service initiatives that promote collaboration, compassion, and positive impact. Through these partnerships, Greater First Baptist continues to serve as a trusted presence in the Mount Pleasant Plains neighborhood.</p>
+          <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+            <a class="btn btn-amber" href="#history" onclick="goTo('history')">Our Full History →</a>
+            <a class="btn btn-ol-amber" href="#contact" onclick="goTo('contact')">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow" style="margin-bottom:.9rem">What We Believe</p>
+          <div class="belief-lst">
+            <div class="blf"><span class="blf-n">1</span><div class="blf-t"><strong>Scripture</strong>The Bible is the inspired, authoritative Word of God and the final rule for faith and practice.</div></div>
+            <div class="blf"><span class="blf-n">2</span><div class="blf-t"><strong>The Trinity</strong>One God eternally existing in three persons: Father, Son, and Holy Spirit.</div></div>
+            <div class="blf"><span class="blf-n">3</span><div class="blf-t"><strong>Salvation</strong>All people are sinners in need of salvation, available only through faith in Jesus Christ.</div></div>
+            <div class="blf"><span class="blf-n">4</span><div class="blf-t"><strong>Baptism</strong>Believer's baptism by immersion as an outward sign of an inward transformation.</div></div>
+            <div class="blf"><span class="blf-n">5</span><div class="blf-t"><strong>The Church</strong>The local church is the body of Christ, called to worship, edify believers, and reach the lost.</div></div>
+            <div class="blf"><span class="blf-n">6</span><div class="blf-t"><strong>Missions</strong>The Great Commission — to make disciples of all nations. (Matthew 28:19-20)</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="split">
+    <div class="panel dark"><div class="bg-ltr">M</div>
+      <p class="eyebrow">Our Mission</p>
+      <h2 class="h2" style="color:var(--white);margin-top:.5rem">Loving God, <em>Loving Others</em></h2>
+      <div class="rule"></div>
+      <p class="body body-w">The mission of The Greater First Baptist Church is to love God, to love others, and to magnify the name of Jesus Christ in all we do.</p>
+    </div>
+    <div class="panel light"><div class="bg-ltr">V</div>
+      <p class="eyebrow">Our Vision</p>
+      <h2 class="h2" style="margin-top:.5rem">Disciples <em>Among All Nations</em></h2>
+      <div class="rule"></div>
+      <p class="body body-dk">To glorify God, make true disciples through missionary activity and support, minister the ordinances, edify believers, and do all that is sovereignly possible and biblically permissible to magnify the name of Jesus.</p>
+    </div>
+  </div>
+
+  <div style="background:var(--white);padding:4rem 0;text-align:center">
+    <div class="container">
+      <p class="eyebrow">Next Steps</p>
+      <h2 class="h2" style="margin-top:.5rem">Ready to Be Part of <em>Our Family?</em></h2>
+      <div class="rule rule-c"></div>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem">
+        <a class="btn btn-amber" href="#contact" onclick="goTo('contact')">Plan Your Visit</a>
+        <a class="btn btn-ol-amber" href="#ministries" onclick="goTo('ministries')">Explore Ministries</a>
+        <a class="btn btn-night" href="#give" onclick="goTo('give')">Support Our Work</a>
+      </div>
+    </div>
+  </div>
+</div><!-- /about -->
+
+<!-- ============================================================  HISTORY  -->
+<div id="page-history" class="page">
+  <div class="pg-banner"><div class="pg-banner-bg"></div>
+    <div class="pg-banner-in">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span> / History</div>
+      <h1>Our <em>History</em></h1>
+    </div>
+  </div>
+
+  <div class="hist-sec">
+    <div class="container">
+      <div style="max-width:700px;margin-bottom:3rem">
+        <p class="eyebrow">A Legacy of Faith</p>
+        <h2 class="h2" style="margin-top:.5rem">150 Years of <em>Faithful Service</em></h2>
+        <div class="rule"></div>
+        <p class="body body-dk" style="margin-bottom:1rem">From humble beginnings in 1876 to the sanctuary we worship in today, The Greater First Baptist Church has been a cornerstone of faith, hope, and service in the Mount Pleasant Plains community of Washington, DC for nearly a century and a half.</p>
+        <blockquote style="border-left:3px solid var(--amber);padding-left:1.3rem;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--night);margin:1.5rem 0">
+          "Our prayer is that this the Greater First Baptist Church, Mount Pleasant Plains, will stand as a bulwark of faith in years to come as it has stood the years past; a living monument of our Saviour who died that all men might live."
+          <footer style="font-size:.8rem;font-style:normal;font-weight:600;font-family:'Outfit',sans-serif;color:var(--amber);margin-top:.5rem;letter-spacing:.1em;text-transform:uppercase">From our 1978 Centennial History</footer>
+        </blockquote>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-date">1876</div><div class="tl-content"><h4>The Beginning</h4><p>A few emancipated slaves, feeling the need of religious guidance, met in the home of sister Charlotte Hamilton on Sherman Avenue, north of Kenyon Street, Mount Pleasant Plains, and started a song and prayer class. Founding deacons Jerry Sykes and Samuel Lee led the early congregation.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1877–78</div><div class="tl-content"><h4>First Baptist Church, Mt. Pleasant Plains</h4><p>They built a frame mission on the corner of Sherman Avenue and Kenyon Street, given the name "First Baptist Church, Mount Pleasant Plains" in 1878. Rev. Andrew Green served as pastor and founder.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1890s</div><div class="tl-content"><h4>Faith & Perseverance</h4><p>Two lots on the southeast corner of Lamont Street and Sherman Avenue were purchased. Facing a foreclosure mortgage of $500, it was the sisters of the church who saved it — Sister Betty Barnes secured a $5,500 loan from Mr. Cook on September 25, 1896.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1910–11</div><div class="tl-content"><h4>A New Building</h4><p>Rev. Daniel Washington of King George, Virginia was called as pastor in April 1910. The old frame building was torn down and services held in a tent until the brick church building was completed in December 1911.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1923</div><div class="tl-content"><h4>Mortgage Paid in Full</h4><p>After years of faithful sacrifice by the entire congregation, the mortgage was paid in full and a clear title obtained. Rev. Daniel Washington served faithfully for 33 years, retiring in 1939.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1947</div><div class="tl-content"><h4>Rev. Edward Thomas, D.D.</h4><p>Installed May 25, 1947, Rev. Thomas led the church through continuous growth — spiritually, numerically, and financially. The church purchased "The Fourth Presbyterian Church and Parsonage" at 13th and Fairmount Streets for $400,000.</p></div></div>
+        <div class="tl-item"><div class="tl-date">Mid-20th C.</div><div class="tl-content"><h4>The Greater First Baptist Church</h4><p>Under Rev. Thomas, the church was reincorporated under its current name, "The Greater First Baptist Church, Mount Pleasant Plains," with the congregation pledging renewed dedication to God and ministry.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1978</div><div class="tl-content"><h4>Jubilee Centennial Celebration</h4><p>The church celebrated its Jubilee Centennial with a historic mortgage-burning ceremony in Rev. Thomas's 31st year as pastor.</p></div></div>
+        <div class="tl-item"><div class="tl-date">2001</div><div class="tl-content"><h4>Dr. Winston C. Ridley, Jr.</h4><p>Following an election on January 27, 2001, Dr. Winston C. Ridley preached his first sermon as Pastor-Elect on March 4, 2001, and was installed May 20, 2001. His leadership brought a new season of vision, stability, and service as the church continued its witness in a changing city. Dr. Ridley also conceived the FOCUS Newsletter Ministry in 2003.</p></div></div>
+        <div class="tl-item"><div class="tl-date">2026</div><div class="tl-content"><h4>Rev. Dr. Jonathan Z. Queen</h4><p>In January 2026, the church entered a new chapter with the election of Rev. Dr. Jonathan Z. Queen as Pastor. Installed March 28, 2026, Dr. Queen brings a vision grounded in unity, love, and shared purpose — honoring the legacy of those who came before while embracing God's call for the future.</p></div></div>
+        <div class="tl-item"><div class="tl-date">1876–Today</div><div class="tl-content"><h4>A Living Testimony</h4><p>From 1876 to today — nearly 150 years — The Greater First Baptist Church of Washington, DC stands as a living testimony: a people shaped by prayer, strengthened by perseverance, and sustained by the faithfulness of God.</p></div></div>
+      </div>
+
+      <div style="background:var(--night);padding:3rem 4rem;margin-top:3.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem">
+        <div>
+          <h2 class="h2-w" style="font-size:1.7rem">Be Part of Our <em>Continuing Story</em></h2>
+          <p class="body body-w" style="margin-top:.5rem;max-width:440px">Join us as we continue the legacy of faith, service, and community that began in 1876.</p>
+        </div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-amber" href="#about" onclick="goTo('about')">Learn More About Us</a>
+          <a class="btn btn-ol-white" href="#calendar" onclick="goTo('calendar')">Visit This Sunday</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /history -->
+
+<!-- ============================================================  LEADERSHIP  -->
+<div id="page-leadership" class="page">
+  <div class="pg-banner"><div class="pg-banner-bg"></div>
+    <div class="pg-banner-in">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span> / Leadership</div>
+      <h1>Our <em>Leadership</em></h1>
+    </div>
+  </div>
+
+  <div class="ldesc">
+    <div class="ldesc-box">
+      <div style="flex:1">
+        <p class="eyebrow" style="color:var(--amber)">Committed to the Cause</p>
+        <h2 class="h2-w" style="margin-top:.5rem">Shepherds <em>Under Christ</em></h2>
+        <div class="rule"></div>
+        <p class="body body-w">Our leadership team recognizes the authority of God, and realizes that we are shepherds who serve under the Chief Shepherd, Jesus Christ. We desire to devote ourselves to prayer and to the ministry of the Word. Our passion and goal is to equip the believers for the work of the ministry until we all attain maturity in the fullness of Christ.</p>
+      </div>
+      <blockquote class="ldesc-q">"Equipping the saints for the work of ministry, for building up the body of Christ."
+        <div style="font-size:.68rem;font-style:normal;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-top:.55rem">Ephesians 4:12</div>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="ldr-grid">
+    <!-- Pastor — Featured -->
+    <div class="lc feat rv">
+      <div class="li-img tall" style="background:linear-gradient(135deg,#c4a882,#7a6048)">
+        <img src="https://thegfbcdc.org/images/dr_q_bust1.jpg" alt="Rev. Dr. Jonathan Z. Queen" onerror="this.outerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:5rem;font-family:Cormorant Garamond,serif;color:rgba(255,255,255,.2)\'>✝</div>'">
+      </div>
+      <div class="li-info" style="display:flex;flex-direction:column;justify-content:center">
+        <div class="li-role">Senior Pastor</div>
+        <div class="li-name" style="font-size:1.5rem">Rev. Dr. Jonathan Z. Queen</div>
+        <div class="rule" style="margin-top:.6rem"></div>
+        <p class="li-bio" style="margin-bottom:1rem">Dr. Queen received his call to Gospel ministry in March 2009 and preached his trial sermon on August 22, 2009. He holds a B.S. in Bible and Christian Ministry from Lancaster Bible College (2011), an M.Div. from Lancaster Theological Seminary (2015), and a Doctor of Ministry from Regent University (2024), where his dissertation focused on a church-based reentry program for formerly incarcerated men.</p>
+        <p class="li-bio" style="margin-bottom:1.4rem">Before coming to Greater First Baptist, Dr. Queen served as Associate Pastor and Youth Pastor at First Baptist Church of Glenarden International under Senior Pastor John K. Jenkins, Sr. He has proclaimed the Gospel across the United States and internationally in South Africa, Rwanda, Peru, and the Holy Land. He is an award-winning author of six books, a motivational speaker, and expert in mentoring and reentry. Life Verses: 1 Timothy 3:1-7; Romans 12:1-2; 2 Timothy 2:24-26.</p>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a href="tel:2024626127" class="btn btn-amber" style="font-size:.68rem">📞 202-462-6127</a>
+          <a href="mailto:pastorqueen@thegfbcdc.org" class="btn btn-ol-amber" style="font-size:.68rem">✉ pastorqueen@thegfbcdc.org</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- First Lady -->
+    <div class="lc rv d1" style="grid-column:span 3">
+      <div style="display:grid;grid-template-columns:240px 1fr">
+        <div class="li-img tall" style="background:linear-gradient(135deg,#9a8a9a,#5a3a6a)">
+          <img src="https://thegfbcdc.org/images/first_lady_queen.jpg" alt="First Lady Rev. Lenia Queen" onerror="this.outerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3rem;font-family:Cormorant Garamond,serif;color:rgba(255,255,255,.2)\'>🌸</div>'">
+        </div>
+        <div class="li-info" style="display:flex;flex-direction:column;justify-content:center">
+          <div class="li-role">First Lady · Licensed & Ordained Minister</div>
+          <div class="li-name">First Lady Rev. Lenia Queen</div>
+          <div class="rule" style="margin-top:.6rem"></div>
+          <p class="li-bio" style="margin-bottom:.8rem">First Lady Rev. Lenia Queen is the devoted wife of Rev. Dr. Jonathan Z. Queen and the proud mother of six adult children ("Mom-Mom" to nine grandchildren). She holds an A.A. in Human Resource Management from Virginia College, a Professional HR Certificate from Villanova University, a B.S. in Bible from Lancaster Bible College, and an M.A. in Clinical Mental Health Counseling from LBC | Capital Seminary & Graduate School. She is a nationally board-certified and licensed therapist.</p>
+          <p class="li-bio" style="margin-bottom:.8rem">She accepted Christ in 1986, rededicated her life in 2001, was licensed as a minister in October 2021, and ordained in August 2024 at First Baptist Church of Glenarden under Senior Pastor John K. Jenkins, Sr. She served as Associate Pastor and group ministry coordinator for Children and Youth at First Baptist Church of Glenarden.</p>
+          <p class="li-bio" style="margin-bottom:1.2rem">She is the CEO, founder, and lead clinician of Sister2Sister Therapy. Alongside her husband, she co-founded New Mindz Ministries, Inc., a 501(c)(3) providing mentoring, mental health support, and reentry resources for at-risk youth, adults, and returning citizens. Her belief: "Healed hearts build healthy families and healthy families build strong churches and communities."</p>
+          <a class="btn btn-amber" href="mailto:info@thegfbcdc.org?subject=For First Lady Queen" style="font-size:.68rem;align-self:flex-start">Contact the Office</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rev. Hood -->
+    <div class="lc rv d1">
+      <div class="li-img" style="background:linear-gradient(135deg,#8a9cb0,#3d5a7a)">
+        <img src="https://thegfbcdc.org/images/rev_hood.jpg" alt="Rev. Robert Hood" onerror="this.outerHTML='<div style=\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;font-family:Cormorant Garamond,serif;color:rgba(255,255,255,.2)\'>✝</div>'">
+      </div>
+      <div class="li-info">
+        <div class="li-role">Associate Minister</div>
+        <div class="li-name">Rev. Robert Hood</div>
+        <p class="li-bio">Born and raised in Lynchburg, Virginia, Rev. Hood holds a B.S. in Recreational Leadership from the University of the District of Columbia (1982) and an M.S. in Biblical Studies from Maple Springs Baptist Bible College and Seminary (2010). Licensed in 2001 and ordained in 2005, he serves in Sunday School, Usher Board, and Community Outreach. He is Director of Therapeutic Recreation and Acting Chaplain at The Stoddard Baptist Nursing Home.</p>
+      </div>
+    </div>
+
+    <!-- Associate Minister Open -->
+    <div class="lc rv d2">
+      <div class="li-img" style="background:linear-gradient(135deg,#6a7a6a,#3a5a3a)">
+        <div style="text-align:center;color:rgba(255,255,255,.3)">
+          <i class="fas fa-cross" style="font-size:2.5rem"></i>
+        </div>
+      </div>
+      <div class="li-info">
+        <div class="li-role">Associate Minister</div>
+        <div class="li-name">Position Open</div>
+        <p class="li-bio">The Greater First Baptist Church welcomes inquiries from qualified candidates who are passionate about serving God and our community. For more information, please contact the church office at 202-462-6127.</p>
+        <a href="tel:2024626127" class="btn btn-ol-amber" style="margin-top:1rem;font-size:.68rem">📞 Call for Info</a>
+      </div>
+    </div>
+
+    <!-- Associate Minister Open -->
+    <div class="lc rv d2">
+      <div class="li-img" style="background:linear-gradient(135deg,#6a7a6a,#3a5a3a)">
+        <div style="text-align:center;color:rgba(255,255,255,.3)">
+          <i class="fas fa-cross" style="font-size:2.5rem"></i>
+        </div>
+      </div>
+      <div class="li-info">
+        <div class="li-role">Associate Minister</div>
+        <div class="li-name">Position Open</div>
+        <p class="li-bio">The Greater First Baptist Church welcomes inquiries from qualified candidates who are passionate about serving God and our community. For more information, please contact the church office at 202-462-6127.</p>
+        <a href="tel:2024626127" class="btn btn-ol-amber" style="margin-top:1rem;font-size:.68rem">📞 Call for Info</a>
+      </div>
+    </div>
+</div>
+
+  <div style="background:var(--parchment);padding:4rem 0;text-align:center;margin-top:2rem">
+    <div class="container">
+      <p class="eyebrow">Connect with Leadership</p>
+      <h2 class="h2" style="margin-top:.5rem">Questions for <em>Our Team?</em></h2>
+      <div class="rule rule-c"></div>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem">
+        <a href="tel:2024626127" class="btn btn-amber">📞 202-462-6127</a>
+        <a href="mailto:info@thegfbcdc.org" class="btn btn-night">✉ Email the Office</a>
+        <a class="btn btn-ol-amber" href="#contact" onclick="goTo('contact')">Contact Page</a>
+      </div>
+    </div>
+  </div>
+</div><!-- /leadership -->
+
+<!-- ============================================================  MINISTRIES  -->
+<div id="page-ministries" class="page">
+  <div class="pg-banner"><div class="pg-banner-bg"></div>
+    <div class="pg-banner-in">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span> / Ministries</div>
+      <h1>Our <em>Ministries</em></h1>
+    </div>
+  </div>
+
+  <section class="min-sec" style="padding-top:5rem">
+    <div class="min-intro">
+      <p class="eyebrow">You Can Make a Difference</p>
+      <h2 class="h2-w" style="margin-top:.5rem">A Place for <em>Every Season of Life</em></h2>
+      <div class="rule"></div>
+      <p class="body body-w" style="max-width:640px">Our church is not a place for spectators — it is a place for team members. Whether you are a five-year-old child, a ninety-five-year-old grandmother, a busy mom, or a businessperson with big responsibilities, we want you to be part of our vibrant community.</p>
+    </div>
+    <div class="min-grid">
+      <div class="mc rv"><div class="mc-icon">🎵</div><div class="mc-name">Media & Technology</div><p class="mc-desc">All weekly sermons are uploaded in video and audio formats. We maintain an active Facebook and YouTube feed for additional church communication and outreach.</p></div>
+      <div class="mc rv d1"><div class="mc-icon">💻</div><div class="mc-name">Small Group Bible Study</div><p class="mc-desc">Connect with others in fellowship, grow in biblical understanding, meet the needs of others in ministry, and nurture your relationship with God. Groups meet throughout the week.</p></div>
+      <div class="mc rv d2"><div class="mc-icon">🚌</div><div class="mc-name">Youth Ministry</div><p class="mc-desc">Each Sunday morning, children participate in their own classes where Bible lessons are taught so that every child gets to participate, ask questions, and learn at their level.</p></div>
+      <div class="mc rv d1"><div class="mc-icon">👩‍👩‍👧</div><div class="mc-name">Women's Group</div><p class="mc-desc">Women's groups provide special times of discipleship, interaction, and refreshing fellowship — a space for the ladies of our congregation to grow and be encouraged in faith.</p></div>
+      <div class="mc rv d2"><div class="mc-icon">📖</div><div class="mc-name">Vacation Bible School</div><p class="mc-desc">VBS is a ministry outreach to educate children about God. Church membership is not required. An inviting atmosphere for kids and families to connect with our church community.</p></div>
+      <div class="mc rv d3"><div class="mc-icon">🎤</div><div class="mc-name">Music & Drama</div><p class="mc-desc">Instrumentalists, vocalists, choir members, and drama participants use their talents and gifts to glorify God. These volunteers are essential to our worship ministry each Sunday.</p></div>
+      <div class="mc rv d1"><div class="mc-icon">🙏</div><div class="mc-name">Prayer Warriors</div><p class="mc-desc">Our Prayer Warriors intercede each Sunday during the service and throughout the week for the pastor, church members, special requests, and missionary needs. Wednesday: corporate prayer and Bible study.</p></div>
+      <div class="mc rv d2"><div class="mc-icon">💍</div><div class="mc-name">Marriage Counseling</div><p class="mc-desc">Trained counselor-couples listen, understand, help, and encourage struggling marriages. By God's grace, this ministry has saved marriages and repaired relationships across our congregation.</p></div>
+      <div class="mc rv d3"><div class="mc-icon">🌍</div><div class="mc-name">Missionary Ministry</div><p class="mc-desc">Dedicated to making disciples throughout all nations through missionary activity and support, fulfilling the Great Commission to spread the Gospel from DC to the ends of the earth.</p></div>
+      <div class="mc rv"><div class="mc-icon">📰</div><div class="mc-name">FOCUS Newsletter Ministry</div><p class="mc-desc">Conceived by Rev. Ridley in 2003, FOCUS serves to spread the Gospel, increase awareness of church activities, and acquaint church members with one another.</p></div>
+      <div class="mc rv d1"><div class="mc-icon">🤝</div><div class="mc-name">Contributions</div><p class="mc-desc">Donate food, donate money, or donate your time as a volunteer. Every act of generosity strengthens our congregation and community. Show your support — Help us soar!</p></div>
+      <div class="mc rv d2"><div class="mc-icon">🏃</div><div class="mc-name">Get Involved</div><p class="mc-desc">No matter your age or season of life, you belong here. Request calendar events, join the music ministry, volunteer for maintenance, or simply show up and serve.</p></div>
+    </div>
+  </section>
+
+  <!-- Get Involved CTAs -->
+  <div style="background:var(--parchment);padding:5rem 0">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div>
+        <p class="eyebrow">Stay Connected</p>
+        <h2 class="h2" style="margin-top:.5rem">FOCUS <em>Newsletter Ministry</em></h2>
+        <div class="rule"></div>
+        <p class="body body-dk" style="margin-bottom:1rem">Conceived by Rev. Ridley in 2003, FOCUS serves to spread the Gospel to the immediate church family and beyond, increase awareness of church activities, and acquaint church members with one another. Subscribe to receive FOCUS directly.</p>
+        <a href="mailto:info@thegfbcdc.org?subject=FOCUS Newsletter Subscription" class="btn btn-amber">Subscribe to FOCUS</a>
+      </div>
+      <div>
+        <p class="eyebrow">Get Involved Today</p>
+        <h2 class="h2" style="margin-top:.5rem">Join a <em>Ministry Team</em></h2>
+        <div class="rule"></div>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfICsUn1JSmk4-QZStEbP8vDpGqUNL8H0Bid3koh61Gyk9jkQ/viewform" target="_blank" rel="noopener" class="btn btn-night">📅 Request Calendar Event</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSecRCgDz5zwNo0nGv0n4sbW3_Yga7H_SacQwynpM-5ExC-Trg/viewform" target="_blank" rel="noopener" class="btn btn-ol-amber">🎵 Music Ministry Interest</a>
+          <a href="https://forms.gle/AJsrUvrMKC35FvCh8" target="_blank" rel="noopener" class="btn btn-ol-amber">🙋 First-Time Visitor Form</a>
+          <a class="btn btn-ol-amber" href="#contact" onclick="goTo('contact')">📬 Contact the Church</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--night);padding:4rem 0;text-align:center">
+    <div class="container">
+      <h2 class="h2-w" style="margin-top:0">Please <em>Join Us!</em></h2>
+      <div class="rule rule-c rule-w"></div>
+      <p class="body body-w" style="max-width:500px;margin:0 auto 2rem">We invite you to join us and become part of one of our many ministries. For more information, contact the church office or speak with a ministry leader after service.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-amber" href="#calendar" onclick="goTo('calendar')">Visit Us This Sunday</a>
+        <a class="btn btn-ol-white" href="#give" onclick="goTo('give')">Support Our Ministries</a>
+      </div>
+    </div>
+  </div>
+</div><!-- /ministries -->
+
+<!-- ============================================================  LIVE STREAM  -->
+<div id="page-live" class="page">
+  <section class="stream-sec">
+    <div class="stream-in">
+      <div class="breadcrumb" style="margin-bottom:1rem"><span onclick="goTo('home')">Home</span> / Live Stream</div>
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.5rem">
+        <p class="eyebrow" style="margin:0">🔴 Live &amp; Streaming</p>
+        <span class="live-dot"></span>
+      </div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:400;color:var(--white);line-height:1.1">Worship With Us <em style="color:var(--amber-lt)">Every Sunday</em></h1>
+      <div class="rule rule-w"></div>
+      <p class="body body-w" style="max-width:540px;margin-bottom:2rem">Experience the presence of God from wherever you are. Watch our services live every Sunday morning on YouTube or Facebook. All are welcome at the table of the Lord.</p>
+
+      <!-- Upcoming Service Times -->
+      <div style="background:rgba(200,135,44,.12);border:1px solid rgba(200,135,44,.25);padding:1.8rem 2rem;margin-bottom:2.5rem">
+        <p class="eyebrow" style="margin-bottom:1rem">Upcoming Service Times</p>
+        <div style="display:flex;gap:2rem;flex-wrap:wrap">
+          <div><div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)">📖 Sunday School</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white)">Every Sunday · 8:45 AM EST</div></div>
+          <div><div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)">⛪ Sunday Worship</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white)">Every Sunday · 10:00 AM EST</div></div>
+          <div><div style="font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)">📚 Bible Study</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white)">Wednesdays · 7:00 PM EST</div></div>
+        </div>
+      </div>
+
+      <!-- Platform Cards -->
+      <div class="platform-grid">
+        <div class="pc">
+          <div class="pc-icon">
+            <svg width="64" height="64" fill="#ff0000" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </div>
+          <div class="pc-name">YouTube Live</div>
+          <p class="pc-desc">Watch and access our complete sermon archive on YouTube. Subscribe to be notified when we go live.</p>
+          <a href="https://www.youtube.com/@thegreaterfirstbaptistchur2346/streams" target="_blank" rel="noopener" class="btn btn-amber">Watch on YouTube</a>
+        </div>
+        <div class="pc">
+          <div class="pc-icon">
+            <svg width="64" height="64" fill="#1877f2" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div class="pc-name">Facebook Live</div>
+          <p class="pc-desc">Join us on Facebook and interact with our community during the service. Like and follow our page for updates.</p>
+          <a href="https://www.facebook.com/share/1CBxfB8q3P/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn btn-amber">Watch on Facebook</a>
+        </div>
+      </div>
+
+      <!-- Recent Sermons -->
+      <div style="margin-top:3rem">
+        <p class="eyebrow" style="margin-bottom:.5rem">Recent Sermons</p>
+        <h2 class="h2-w" style="font-size:1.7rem">Missed a Service? <em>Catch Up</em></h2>
+        <div class="rule rule-w"></div>
+      </div>
+      <div class="sermon-grid">
+        <div class="scard">
+          <div class="sthumb">
+            <img src="https://thegfbcdc.org/images/Front.jpg" alt="Sermon">
+            <a href="https://www.youtube.com/watch?v=YgryT6EXlLQ" target="_blank" rel="noopener" class="splay">▶</a>
+          </div>
+          <div class="sinfo">
+            <h4>Living in Faith Everyday</h4>
+            <div class="smeta">📅 February 1, 2026 · Pastor Dr. Queen</div>
+            <p class="sdesc">Exploring what it means to walk in faith daily and trust God's plan for our lives.</p>
+          </div>
+        </div>
+        <div class="scard">
+          <div class="sthumb">
+            <img src="https://thegfbcdc.org/images/Front.jpg" alt="Sermon">
+            <a href="https://www.youtube.com/watch?v=O57G1Hy_O_A" target="_blank" rel="noopener" class="splay">▶</a>
+          </div>
+          <div class="sinfo">
+            <h4>Magnifying Jesus Christ</h4>
+            <div class="smeta">📅 January 25, 2026 · Pastor Dr. Queen</div>
+            <p class="sdesc">How we can glorify Jesus in everything we do and share His love with others.</p>
+          </div>
+        </div>
+        <div class="scard">
+          <div class="sthumb">
+            <img src="https://thegfbcdc.org/images/Front.jpg" alt="Sermon">
+            <a href="https://www.youtube.com/watch?v=po9xUAc4LxA" target="_blank" rel="noopener" class="splay">▶</a>
+          </div>
+          <div class="sinfo">
+            <h4>New Year, New Vision</h4>
+            <div class="smeta">📅 January 19, 2026 · Pastor Dr. Queen</div>
+            <p class="sdesc">Starting the new year with God's vision and purpose for our lives and church.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:var(--night-2);padding:2.5rem;margin-top:2.5rem;border:1px solid rgba(200,135,44,.14)">
+        <p class="eyebrow">Technical Support</p>
+        <p class="body body-w" style="margin-top:.4rem;max-width:480px">Contact our Media &amp; Technology Ministry for streaming support or to access archived sermons.</p>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.3rem">
+          <a href="tel:2024626127" class="btn btn-amber">📞 202-462-6127</a>
+          <a href="mailto:info@thegfbcdc.org" class="btn btn-ol-white">✉ Email Us</a>
+          <a class="btn btn-ol-white" href="#contact" onclick="goTo('contact')">Contact Page</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /live -->
+
+<!-- ============================================================  CALENDAR  -->
+<div id="page-calendar" class="page">
+  <div style="background:var(--ivory);padding:10rem 0 6rem">
+    <div class="container">
+      <div class="breadcrumb" style="margin-bottom:1rem"><span onclick="goTo('home')">Home</span> / Calendar</div>
+      <p class="eyebrow">Events &amp; Service Times</p>
+      <h1 class="h2" style="margin-top:.5rem">Church <em>Calendar 2027</em></h1>
+      <div class="rule"></div>
+      <p class="body body-dk" style="max-width:560px;margin-bottom:3rem">Stay connected with everything happening at Greater First Baptist. Worship services, ministry events, and community gatherings — all in one place.</p>
+
+      <div class="ev-grid">
+        <div class="ecard rv">
+          <span class="ev-badge">Weekly</span>
+          <div class="ev-date">📖 Every Sunday</div>
+          <div class="ev-title">Sunday School</div>
+          <p class="ev-desc">Age-appropriate Bible study for children, youth, and adults. Classes cover every level of study, from Nursery to Adult. You are invited, along with neighbors and coworkers.</p>
+          <div class="ev-time">⏰ 8:45 AM</div>
+        </div>
+        <div class="ecard rv d1">
+          <span class="ev-badge">Weekly</span>
+          <div class="ev-date">⛪ Every Sunday</div>
+          <div class="ev-title">Sunday Morning Worship</div>
+          <p class="ev-desc">Main worship service featuring inspiring preaching, uplifting music from our choirs, and communion with fellow believers. Streamed live on YouTube and Facebook.</p>
+          <div class="ev-time">⏰ 10:00 AM · In-Person &amp; Online</div>
+        </div>
+        <div class="ecard rv d2">
+          <span class="ev-badge">Weekly</span>
+          <div class="ev-date">📚 Every Wednesday</div>
+          <div class="ev-title">Bible Study &amp; Prayer Meeting</div>
+          <p class="ev-desc">Mid-week Bible study provides deeper exploration of God's Word. Join us as we study scripture together, ask questions, and pray for church, community, and world.</p>
+          <div class="ev-time">⏰ 7:00 PM EST</div>
+        </div>
+        <div class="ecard rv">
+          <div class="ev-date">🧒 Every Sunday</div>
+          <div class="ev-title">Youth Group</div>
+          <p class="ev-desc">Creative and engaging programs for children and teens. Fellowship, service projects, and opportunities to grow in faith and develop leadership skills.</p>
+          <div class="ev-time">⏰ Weekly Programs</div>
+        </div>
+        <div class="ecard rv d1">
+          <div class="ev-date">🌞 Summer</div>
+          <div class="ev-title">Vacation Bible School</div>
+          <p class="ev-desc">A week-long ministry outreach for children of all backgrounds. Church membership is not required — all are welcome in this inviting atmosphere.</p>
+          <div class="ev-time">⏰ Dates announced in spring</div>
+        </div>
+        <div class="ecard rv d2">
+          <div class="ev-date">📅 Throughout the Year</div>
+          <div class="ev-title">Special Events &amp; Programs</div>
+          <p class="ev-desc">Music ministry programs, community events, concerts, and fellowship gatherings. Check the church bulletin or contact the office for current schedule.</p>
+          <div class="ev-time">⏰ See Sunday bulletin</div>
+        </div>
+      </div>
+
+      <!-- Visit Info -->
+      <div style="background:var(--parchment);padding:3rem;margin-top:2.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem">
+        <div>
+          <p class="eyebrow" style="margin-bottom:.5rem">📍 Location</p>
+          <div class="body body-dk">The Greater First Baptist Church<br>2701 13th Street, N.W.<br>Washington, D.C. 20009</div>
+        </div>
+        <div>
+          <p class="eyebrow" style="margin-bottom:.5rem">🚗 Parking</p>
+          <div class="body body-dk">Carlos Rosario International Public Charter School, 1100 Harvard St NW. A GFBC shuttle transports guests to and from the church every Sunday.</div>
+        </div>
+        <div>
+          <p class="eyebrow" style="margin-bottom:.5rem">⏰ Office Hours</p>
+          <div class="body body-dk">Mon – Fri: 9:00 AM – 4:00 PM<br>Saturday: By Appointment<br>Sunday: Worship Services</div>
+        </div>
+      </div>
+
+      <div style="background:var(--night);padding:3rem;margin-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem">
+        <div>
+          <p class="eyebrow" style="color:var(--amber)">First Time Visitor?</p>
+          <h2 class="h2-w" style="font-size:1.6rem;margin-top:.3rem">Come As You Are,<br><em>You Belong Here</em></h2>
+        </div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a href="https://forms.gle/AJsrUvrMKC35FvCh8" target="_blank" rel="noopener" class="btn btn-amber">🙋 Visitor Form</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfICsUn1JSmk4-QZStEbP8vDpGqUNL8H0Bid3koh61Gyk9jkQ/viewform" target="_blank" rel="noopener" class="btn btn-ol-white">📅 Request Event</a>
+          <a class="btn btn-ol-white" href="#contact" onclick="goTo('contact')">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /calendar -->
+
+<!-- ============================================================  GALLERY  -->
+<div id="page-gallery" class="page">
+  <div style="background:var(--ivory);padding:10rem 0 6rem">
+    <div class="container">
+      <div class="breadcrumb" style="margin-bottom:1rem"><span onclick="goTo('home')">Home</span> / Gallery</div>
+      <p class="eyebrow">Our Community in Photos</p>
+      <h1 class="h2" style="margin-top:.5rem">Life at <em>Greater First Baptist</em></h1>
+      <div class="rule"></div>
+      <p class="body body-dk" style="max-width:520px;margin-bottom:3rem">Moments of worship, fellowship, ministry, and community from the Greater First Baptist Church family in Washington, DC.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gi"><img src="https://thegfbcdc.org/images/Front.jpg" alt="Church Building"><div class="gi-cap"><span class="gi-cap-t">Our Church Home — 2701 13th St NW</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/dr_and_mrs.jpg" alt="Pastor and First Lady Queen"><div class="gi-cap"><span class="gi-cap-t">Rev. Dr. & First Lady Queen</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/Doc_Queen_Pulpit.jpeg" alt="Pastor Queen at the Pulpit"><div class="gi-cap"><span class="gi-cap-t">Pastor Queen — Sunday Worship</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/pulpit.jpg" alt="The Pulpit"><div class="gi-cap"><span class="gi-cap-t">The Pulpit</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/childrens_choir.jpg" alt="Children's Choir"><div class="gi-cap"><span class="gi-cap-t">Children's Choir</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/church_play_february_2019.jpg" alt="Church Program 2019"><div class="gi-cap"><span class="gi-cap-t">Church Drama Ministry</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/Congregate.jpg" alt="Congregation"><div class="gi-cap"><span class="gi-cap-t">Sunday Congregation</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/our_ladies.jpg" alt="Women's Ministry"><div class="gi-cap"><span class="gi-cap-t">Women's Ministry Fellowship</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/in_prayer.jpg" alt="In Prayer"><div class="gi-cap"><span class="gi-cap-t">Community in Prayer</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/7_pic_9455.jpg" alt="In The Pulpit"><div class="gi-cap"><span class="gi-cap-t">In the Pulpit</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/8_pic.jpg" alt="Special Service"><div class="gi-cap"><span class="gi-cap-t">Special Service</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/2_ladies.jpg" alt="Church Activity"><div class="gi-cap"><span class="gi-cap-t">Church Activity</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/13_our_pam.jpg" alt="Church Program"><div class="gi-cap"><span class="gi-cap-t">Church Program</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/18_pic_0330.jpg" alt="At the Podium"><div class="gi-cap"><span class="gi-cap-t">At the Podium</span></div></div>
+      <div class="gi"><img src="https://thegfbcdc.org/images/support_ministry.png" alt="Gospel Choir"><div class="gi-cap"><span class="gi-cap-t">Giving</span></div></div>
+    </div>
+    <div style="text-align:center;padding:3rem 2rem 0">
+      <p class="body" style="margin-bottom:1.3rem">Have photos to share with the church community? Send them to us!</p>
+      <a href="mailto:info@thegfbcdc.org?subject=Photo Submission" class="btn btn-amber">Submit Photos →</a>
+    </div>
+  </div>
+</div><!-- /gallery -->
+
+<!-- ============================================================  CONTACT  -->
+<div id="page-contact" class="page">
+  <div class="pg-banner"><div class="pg-banner-bg"></div>
+    <div class="pg-banner-in">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span> / Contact</div>
+      <h1>Get In <em>Touch</em></h1>
+    </div>
+  </div>
+
+  <section class="contact-sec">
+    <div class="contact-in">
+      <div>
+        <p class="eyebrow">We'd Love to Hear From You</p>
+        <h2 class="h2" style="margin-top:.5rem">Come As You Are,<br><em>You Belong Here</em></h2>
+        <div class="rule"></div>
+        <p class="body body-dk" style="margin-bottom:2rem">Whether you're new to the area, searching for a church home, or just have a question — our team is here and ready to connect with you.</p>
+        <div class="ci">
+          <div class="cc"><div class="cc-icon"><i class="fas fa-phone" style="color:#fff;font-size:.88rem"></i></div><div><div class="cc-lbl">Phone</div><div class="cc-val"><a href="tel:2024626127">202-462-6127</a><br><a href="tel:2024621730">202-462-1730</a></div></div></div>
+          <div class="cc"><div class="cc-icon"><i class="fas fa-fax" style="color:#fff;font-size:.88rem"></i></div><div><div class="cc-lbl">Fax</div><div class="cc-val">202-462-8410</div></div></div>
+          <div class="cc"><div class="cc-icon"><i class="fas fa-envelope" style="color:#fff;font-size:.88rem"></i></div><div><div class="cc-lbl">Email</div><div class="cc-val"><a href="mailto:info@thegfbcdc.org">info@thegfbcdc.org</a></div></div></div>
+          <div class="cc"><div class="cc-icon"><i class="fas fa-map-marker-alt" style="color:#fff;font-size:.88rem"></i></div><div><div class="cc-lbl">Address</div><div class="cc-val">The Greater First Baptist Church<br>2701 13th Street, N.W.<br>Washington, D.C. 20009</div></div></div>
+          <div class="cc"><div class="cc-icon"><i class="fas fa-clock" style="color:#fff;font-size:.88rem"></i></div><div><div class="cc-lbl">Office Hours</div><div class="cc-val">Mon – Fri: 9:00 AM – 4:00 PM<br>Saturday: By Appointment<br>Sunday: Worship Services</div></div></div>
+        </div>
+      </div>
+
+      <!-- Right column: Map + Form -->
+      <div>
+        <div class="map-box" style="margin-bottom:2rem;min-height:320px">
+          <div class="map-tag">📍 2701 13th St NW, DC 20009</div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6207.909459685565!2d-77.0292107!3d38.9250122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b7e1c1091d6b%3A0x785199a699d51b18!2sThe%20Greater%20First%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1770510011876!5m2!1sen!2sus" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Church Map" style="min-height:320px"></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="cform-box">
+          <h3>Send Us a Message</h3>
+          <form action="https://formspree.io/f/mgolekvw" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Submission from GFBC Website">
+            <div class="fg"><label>Full Name *</label><input type="text" name="name" required></div>
+            <div class="fg"><label>Email Address *</label><input type="email" name="email" required></div>
+            <div class="fg"><label>Phone Number</label><input type="tel" name="phone"></div>
+            <div class="fg"><label>Subject *</label>
+              <select name="subject" required>
+                <option value="">Select a topic...</option>
+                <option>General Inquiry</option>
+                <option>Prayer Request</option>
+                <option>New Member Information</option>
+                <option>Ministry Information</option>
+                <option>Event Information</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Message *</label><textarea name="message" required></textarea></div>
+            <button type="submit" class="sub-btn">Send Message →</button>
+          </form>
+        </div>
+
+        <div style="background:var(--parchment);padding:1.8rem;margin-top:1.2rem;border-left:3px solid var(--amber)">
+          <p class="eyebrow" style="margin-bottom:.5rem">First-Time Visitor?</p>
+          <p class="body body-dk" style="margin-bottom:1rem;font-size:.88rem">Fill out our visitor form and our team will be in touch to welcome you!</p>
+          <a href="https://forms.gle/AJsrUvrMKC35FvCh8" target="_blank" rel="noopener" class="btn btn-amber" style="font-size:.68rem">Complete Visitor Form →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /contact -->
+
+<!-- ============================================================  GIVE  -->
+<div id="page-give" class="page">
+  <div class="pg-banner"><div class="pg-banner-bg"></div>
+    <div class="pg-banner-in">
+      <div class="breadcrumb"><span onclick="goTo('home')">Home</span> / Give</div>
+      <h1>Support Our <em>Ministry</em></h1>
+    </div>
+  </div>
+
+  <section class="give-sec">
+    <div class="give-cross">✝</div>
+    <div class="give-in">
+      <div>
+        <p class="eyebrow">Your Generosity Matters</p>
+        <h2 class="h2" style="margin-top:.5rem">Give from <em>the Heart</em></h2>
+        <div class="rule"></div>
+        <p class="give-txt">Your generosity helps us continue our mission to love God, love others, and magnify the name of Jesus Christ throughout our community and beyond. Giving has a deeper impact than the gift itself.</p>
+      </div>
+      <div class="give-actions">
+        <a href="https://thegfbcdc.org/giving-form-paypal3.html" target="_blank" rel="noopener" class="btn btn-night">💳 Give Online Now</a>
+        <a href="#give-qr" onclick="goTo('give-qr')" style="font-size:.75rem;color:var(--night);text-decoration:underline;opacity:.7;cursor:pointer">📱 View QR Code</a>
+      </div>
+    </div>
+
+    <div class="give-methods">
+      <div class="gm"><div class="gm-icon">🙏</div><div class="gm-title">In Person</div><p class="gm-desc">Give your tithes and offerings during any worship service. Offering plates are passed, or give at the church office during business hours.</p></div>
+      <div class="gm"><div class="gm-icon">✉️</div><div class="gm-title">By Mail</div><p class="gm-desc">Send check or money order to: The Greater First Baptist Church, 2701 13th Street, N.W., Washington, D.C. 20009.</p></div>
+      <div class="gm"><div class="gm-icon">🌐</div><div class="gm-title">Online</div><p class="gm-desc">Give securely at any time via our PayPal giving portal — fast, safe, and convenient from any device anywhere.</p></div>
+      <div class="gm"><div class="gm-icon">📞</div><div class="gm-title">Contact the Church</div><p class="gm-desc">For planned gifts, memorial gifts, or special arrangements, call <a href="tel:2024626127" style="color:var(--night);font-weight:600">202-462-6127</a> or email <a href="mailto:info@thegfbcdc.org" style="color:var(--night)">info@thegfbcdc.org</a>.</p></div>
+    </div>
+
+    <div class="scripture-blk">
+      <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."</p>
+      <div class="scripture-ref">2 Corinthians 9:7 (NIV)</div>
+    </div>
+  </section>
+
+  <!-- What gifts support -->
+  <div style="background:var(--white);padding:5rem 0">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:2.5rem">
+        <p class="eyebrow">Where Your Gift Goes</p>
+        <h2 class="h2" style="margin-top:.4rem">Your Contributions <em>Support</em></h2>
+        <div class="rule rule-c"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem">
+        <div style="background:var(--parchment);padding:1.7rem;border-top:3px solid var(--amber)"><div style="font-size:1.4rem;margin-bottom:.7rem">⛪</div><div class="gm-title">Weekly Worship Services</div><p class="gm-desc">Sunday School, Sunday services, and special worship events throughout the year.</p></div>
+        <div style="background:var(--parchment);padding:1.7rem;border-top:3px solid var(--amber)"><div style="font-size:1.4rem;margin-bottom:.7rem">🧒</div><div class="gm-title">Youth Programs</div><p class="gm-desc">Children's ministry, VBS, and youth development programs for the next generation.</p></div>
+        <div style="background:var(--parchment);padding:1.7rem;border-top:3px solid var(--amber)"><div style="font-size:1.4rem;margin-bottom:.7rem">🌍</div><div class="gm-title">Outreach &amp; Missions</div><p class="gm-desc">Community service and global missionary support fulfilling the Great Commission.</p></div>
+        <div style="background:var(--parchment);padding:1.7rem;border-top:3px solid var(--amber)"><div style="font-size:1.4rem;margin-bottom:.7rem">🏛️</div><div class="gm-title">Building &amp; Maintenance</div><p class="gm-desc">Keeping our historic facility in excellent condition for worship and community use.</p></div>
+        <div style="background:var(--parchment);padding:1.7rem;border-top:3px solid var(--amber)"><div style="font-size:1.4rem;margin-bottom:.7rem">🤝</div><div class="gm-title">Member Support</div><p class="gm-desc">Pastoral care, counseling, and support for members and families in times of need.</p></div>
+        <div style="background:var(--parchment);padding:1.7rem;border-top:3px solid var(--amber)"><div style="font-size:1.4rem;margin-bottom:.7rem">📡</div><div class="gm-title">Technology &amp; Streaming</div><p class="gm-desc">Live streaming, audio/video equipment, and digital outreach to extend our reach.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tax + QR -->
+  <div style="background:var(--parchment);padding:4rem 0">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center">
+      <div>
+        <p class="eyebrow">501(c)(3) Non-Profit</p>
+        <h2 class="h2" style="margin-top:.4rem;font-size:1.7rem">Tax <em>Deductible Giving</em></h2>
+        <div class="rule"></div>
+        <p class="body body-dk" style="margin-bottom:1rem">The Greater First Baptist Church is a recognized 501(c)(3) non-profit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a year-end receipt summarizing your contributions.</p>
+        <p class="body body-dk" style="margin-bottom:1.5rem">For planned giving, memorial gifts, or to discuss special giving opportunities, please contact our church office.</p>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a href="tel:2024626127" class="btn btn-amber">📞 202-462-6127</a>
+          <a href="mailto:info@thegfbcdc.org" class="btn btn-night">✉ Email Us</a>
+        </div>
+      </div>
+      <!-- QR -->
+      <div style="background:var(--white);padding:2.5rem;text-align:center;border:1px solid var(--parchment-2)" id="give-qr">
+        <p class="eyebrow" style="margin-bottom:1rem">📱 Mobile Giving — Scan to Give</p>
+        <div class="qr-display">
+          <a href="https://thegfbcdc.org/giving-form-paypal3.html" target="_blank" rel="noopener">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://thegfbcdc.org/giving-form-paypal3.html" alt="QR Code — Scan to Give Online">
+          </a>
+        </div>
+        <div class="qr-steps">
+          <div class="qs"><div class="qs-n">1</div><p class="qs-t" style="font-size:.78rem">Open Camera</p></div>
+          <div class="qs"><div class="qs-n">2</div><p class="qs-t" style="font-size:.78rem">Scan Code</p></div>
+          <div class="qs"><div class="qs-n">3</div><p class="qs-t" style="font-size:.78rem">Tap Link</p></div>
+          <div class="qs"><div class="qs-n">4</div><p class="qs-t" style="font-size:.78rem">Give!</p></div>
+        </div>
+        <a href="https://thegfbcdc.org/giving-form-paypal3.html" target="_blank" rel="noopener" class="btn btn-amber" style="margin-top:1.5rem">Give Online →</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--night);padding:3rem 0;text-align:center">
+    <div class="container">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic;color:var(--white);margin-bottom:.5rem">Thank you for your faithful support.</p>
+      <p class="body body-w" style="max-width:480px;margin:0 auto 1.5rem">Your generosity enables us to continue our ministry and make a lasting impact in our community and around the world. May God bless you abundantly.</p>
+      <a href="#home" class="btn btn-amber" onclick="goTo('home')">Return to Home</a>
+    </div>
+  </div>
+</div><!-- /give -->
+
+<!-- ============================================================  FOOTER  -->
+<footer id="site-footer">
+  <div class="ft-grid">
+    <div>
+      <div class="ft-brand-n">The Greater First Baptist Church</div>
+      <div class="ft-brand-s">Mount Pleasant Plains · Washington, DC</div>
+      <p class="ft-tagline">"Loving God, Loving Others,<br>Magnifying Jesus Christ."</p>
+      <div style="margin-top:1.4rem" class="ft-contact">
+        <a href="tel:2024626127" style="display:block;margin-bottom:3px">📞 202-462-6127</a>
+        <a href="tel:2024621730" style="display:block;margin-bottom:3px">📞 202-462-1730</a>
+        <a href="mailto:info@thegfbcdc.org" style="display:block">✉ info@thegfbcdc.org</a>
+      </div>
+      <div class="ft-social">
+        <a href="https://www.facebook.com/people/The-Greater-First-Baptist-Church-of-Mt-Pleasant-Plains/100064437860178/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UCguwrSa2mxgh0LgWxsHcR5A" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/k29258218" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.google.com/maps/place/The+Greater+First+Baptist+Church/@38.9250122,-77.0292107,16z" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-t">Navigate</div>
+      <ul class="ft-links">
+        <li><button onclick="goTo('home')">Home</button></li>
+        <li><button onclick="goTo('about')">About</button></li>
+        <li><button onclick="goTo('history')">History</button></li>
+        <li><button onclick="goTo('leadership')">Leadership</button></li>
+        <li><button onclick="goTo('ministries')">Ministries</button></li>
+        <li><button onclick="goTo('calendar')">Calendar</button></li>
+        <li><button onclick="goTo('gallery')">Gallery</button></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-t">Resources</div>
+      <ul class="ft-links">
+        <li><button onclick="goTo('live')">🔴 Live Stream</button></li>
+        <li><button onclick="goTo('give')">Give Online</button></li>
+        <li><button onclick="goTo('contact')">Contact Us</button></li>
+        <li><a href="https://forms.gle/AJsrUvrMKC35FvCh8" target="_blank" rel="noopener">First-Time Visitor Form</a></li>
+        <li><a href="https://docs.google.com/forms/d/1MKJIJElH9_jO5sSnt7jwY3vTErWGfOD-EqG-Zd4SpPk/viewform" target="_blank" rel="noopener">Church Survey</a></li>
+        <li><a href="mailto:info@thegfbcdc.org?subject=FOCUS Newsletter">FOCUS Newsletter</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-col-t">Service Times</div>
+      <div class="ft-contact">
+        <strong style="color:rgba(255,255,255,.55);font-weight:500">Sunday School</strong><br>8:45 AM<br><br>
+        <strong style="color:rgba(255,255,255,.55);font-weight:500">Sunday Service</strong><br>10:00 AM<br><br>
+        <strong style="color:rgba(255,255,255,.55);font-weight:500">Wednesday Bible Study</strong><br>7:00 PM<br><br>
+        <strong style="color:rgba(255,255,255,.55);font-weight:500">Office Hours</strong><br>Mon–Fri 9AM–4PM
+      </div>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2027 The Greater First Baptist Church. All rights reserved. · <a href="https://thegfbcdc.org" target="_blank" rel="noopener">thegfbcdc.org</a></span>
+    <span><a href="tel:2024626127">202-462-6127</a> · <a href="mailto:info@thegfbcdc.org">info@thegfbcdc.org</a> · Fax: 202-462-8410</span>
+  </div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="float-wrap">
+  <button class="flt-btn" onclick="goTo('history')"><i class="fas fa-book-open"></i> History</button>
+  <button class="flt-btn give-f" onclick="goTo('give')"><i class="fas fa-heart"></i> Give</button>
+  <a href="https://forms.gle/AJsrUvrMKC35FvCh8" target="_blank" rel="noopener" class="flt-btn"><i class="fas fa-user-check"></i> 1st Time Visitor</a>
+</div>
+
+<script>
+/* ===== PAGES ===== */
+const PAGES = ['home','about','history','leadership','ministries','live','calendar','gallery','contact','give'];
+
+function goTo(id, e) {
+  if (e) e.preventDefault();
+  if (!PAGES.includes(id)) id = 'home';
+  PAGES.forEach(p => { const el = document.getElementById('page-'+p); if(el) el.classList.remove('active'); });
+  const tgt = document.getElementById('page-'+id);
+  if(tgt) tgt.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // nav active
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active-link'));
+  const al = document.querySelector('.nav-links a[href="#'+id+'"]');
+  if(al) al.classList.add('active-link');
+  history.replaceState(null,'','#'+id);
+  setTimeout(initReveal,80);
+}
+function showPage(id){ goTo(id); }
+
+/* ===== MOBILE ===== */
+function toggleMob(){document.getElementById('mobNav').classList.toggle('open')}
+window.addEventListener('resize',()=>{if(window.innerWidth>900)document.getElementById('mobNav').classList.remove('open')});
+
+/* ===== REVEAL ===== */
+function initReveal(){
+  const els = document.querySelectorAll('.page.active .rv:not(.vis)');
+  const io = new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.1});
+  els.forEach(r=>io.observe(r));
+}
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('.page.active .rv:not(.vis)').forEach(r=>{
+    if(r.getBoundingClientRect().top<window.innerHeight*.9) r.classList.add('vis');
+  });
+},{passive:true});
+
+/* ===== INIT ===== */
+document.addEventListener('DOMContentLoaded',()=>{
+  const hash=window.location.hash.replace('#','');
+  goTo(PAGES.includes(hash)?hash:'home');
+});
+
+/* ===== GALLERY LIGHTBOX ===== */
+document.addEventListener('click',e=>{
+  const gi = e.target.closest('.gi');
+  if(!gi) return;
+  const img = gi.querySelector('img');
+  if(!img) return;
+  const lb = document.createElement('div');
+  lb.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:999;display:flex;align-items:center;justify-content:center;cursor:zoom-out';
+  const li = document.createElement('img');
+  li.src=img.src; li.style.cssText='max-width:90%;max-height:90%;object-fit:contain';
+  lb.appendChild(li); document.body.appendChild(lb);
+  lb.addEventListener('click',()=>lb.remove());
+  document.addEventListener('keydown',function esc(ev){if(ev.key==='Escape'){lb.remove();document.removeEventListener('keydown',esc)}});
+});
+</script>
+</body>
+</html>
